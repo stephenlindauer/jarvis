@@ -11,10 +11,15 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+    var statusItem: NSStatusItem!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        print("Hello?")
         // Insert code here to initialize your application
+        statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
+        statusItem.image = NSImage.init(named: "jarvis-icon")
+        
+        
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {

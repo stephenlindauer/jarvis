@@ -12,6 +12,10 @@
 		018E820F1CE6C2F400E835DF /* Jarvis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 018E820D1CE6C2F400E835DF /* Jarvis.xcdatamodeld */; };
 		018E82111CE6C2F400E835DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018E82101CE6C2F400E835DF /* Assets.xcassets */; };
 		018E82141CE6C2F400E835DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018E82121CE6C2F400E835DF /* Main.storyboard */; };
+		018E821E1CE6CDFE00E835DF /* ISSoundAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 018E821D1CE6CDFE00E835DF /* ISSoundAdditions.m */; };
+		018E82221CE6DFAD00E835DF /* JClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E82211CE6DFAD00E835DF /* JClient.swift */; };
+		018E82241CE6F21900E835DF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018E82231CE6F21900E835DF /* CoreLocation.framework */; };
+		0D5A0BB99E2B19BEB16F6533 /* libPods-Jarvis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F5AE44956910EDC5A0DD5B /* libPods-Jarvis.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,14 @@
 		018E82101CE6C2F400E835DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		018E82131CE6C2F400E835DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		018E82151CE6C2F400E835DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		018E821B1CE6CDFD00E835DF /* Jarvis-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jarvis-Bridging-Header.h"; sourceTree = "<group>"; };
+		018E821C1CE6CDFE00E835DF /* ISSoundAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSoundAdditions.h; sourceTree = "<group>"; };
+		018E821D1CE6CDFE00E835DF /* ISSoundAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSoundAdditions.m; sourceTree = "<group>"; };
+		018E82211CE6DFAD00E835DF /* JClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JClient.swift; sourceTree = "<group>"; };
+		018E82231CE6F21900E835DF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1E799205F00FCD990970D949 /* Pods-Jarvis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jarvis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jarvis/Pods-Jarvis.debug.xcconfig"; sourceTree = "<group>"; };
+		43F5AE44956910EDC5A0DD5B /* libPods-Jarvis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jarvis.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB39A70939A1FE317C07ACA /* Pods-Jarvis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jarvis.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jarvis/Pods-Jarvis.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018E82241CE6F21900E835DF /* CoreLocation.framework in Frameworks */,
+				0D5A0BB99E2B19BEB16F6533 /* libPods-Jarvis.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +54,8 @@
 			children = (
 				018E82081CE6C2F400E835DF /* Jarvis */,
 				018E82071CE6C2F400E835DF /* Products */,
+				D6AD0D0ACA0E60900247DE00 /* Pods */,
+				09B6E1AC283A525AC03B223C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +70,52 @@
 		018E82081CE6C2F400E835DF /* Jarvis */ = {
 			isa = PBXGroup;
 			children = (
+				018E821B1CE6CDFD00E835DF /* Jarvis-Bridging-Header.h */,
+				018E821F1CE6CE0200E835DF /* Third Party */,
 				018E82091CE6C2F400E835DF /* AppDelegate.swift */,
 				018E820B1CE6C2F400E835DF /* ViewController.swift */,
 				018E82101CE6C2F400E835DF /* Assets.xcassets */,
 				018E82121CE6C2F400E835DF /* Main.storyboard */,
 				018E82151CE6C2F400E835DF /* Info.plist */,
 				018E820D1CE6C2F400E835DF /* Jarvis.xcdatamodeld */,
+				018E82211CE6DFAD00E835DF /* JClient.swift */,
 			);
 			path = Jarvis;
+			sourceTree = "<group>";
+		};
+		018E821F1CE6CE0200E835DF /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				018E82201CE6CE0A00E835DF /* ISSoundAdditions */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		018E82201CE6CE0A00E835DF /* ISSoundAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				018E821C1CE6CDFE00E835DF /* ISSoundAdditions.h */,
+				018E821D1CE6CDFE00E835DF /* ISSoundAdditions.m */,
+			);
+			name = ISSoundAdditions;
+			sourceTree = "<group>";
+		};
+		09B6E1AC283A525AC03B223C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				018E82231CE6F21900E835DF /* CoreLocation.framework */,
+				43F5AE44956910EDC5A0DD5B /* libPods-Jarvis.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6AD0D0ACA0E60900247DE00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E799205F00FCD990970D949 /* Pods-Jarvis.debug.xcconfig */,
+				CFB39A70939A1FE317C07ACA /* Pods-Jarvis.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 018E82181CE6C2F400E835DF /* Build configuration list for PBXNativeTarget "Jarvis" */;
 			buildPhases = (
+				FE01DCD3ECFD984E95866375 /* Check Pods Manifest.lock */,
 				018E82021CE6C2F400E835DF /* Sources */,
 				018E82031CE6C2F400E835DF /* Frameworks */,
 				018E82041CE6C2F400E835DF /* Resources */,
+				37D7B3CACB9E4F7442DB2284 /* Embed Pods Frameworks */,
+				1156A0F5250A3697CCB0C7BC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,12 +186,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1156A0F5250A3697CCB0C7BC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jarvis/Pods-Jarvis-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37D7B3CACB9E4F7442DB2284 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jarvis/Pods-Jarvis-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE01DCD3ECFD984E95866375 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		018E82021CE6C2F400E835DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018E82221CE6DFAD00E835DF /* JClient.swift in Sources */,
 				018E820C1CE6C2F400E835DF /* ViewController.swift in Sources */,
+				018E821E1CE6CDFE00E835DF /* ISSoundAdditions.m in Sources */,
 				018E820A1CE6C2F400E835DF /* AppDelegate.swift in Sources */,
 				018E820F1CE6C2F400E835DF /* Jarvis.xcdatamodeld in Sources */,
 			);
@@ -238,25 +345,32 @@
 		};
 		018E82191CE6C2F400E835DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E799205F00FCD990970D949 /* Pods-Jarvis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Jarvis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lindauer.Jarvis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Jarvis/Jarvis-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		018E821A1CE6C2F400E835DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB39A70939A1FE317C07ACA /* Pods-Jarvis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Jarvis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lindauer.Jarvis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Jarvis/Jarvis-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -279,6 +393,7 @@
 				018E821A1CE6C2F400E835DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
