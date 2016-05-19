@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		017A977A1CED95AC0088DE48 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A97791CED95AC0088DE48 /* NSDate+Helper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		017A97831CEE23AE0088DE48 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017A97821CEE23AE0088DE48 /* AudioToolbox.framework */; };
+		017A97851CEE23B60088DE48 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017A97841CEE23B60088DE48 /* AVFoundation.framework */; };
 		018E820A1CE6C2F400E835DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E82091CE6C2F400E835DF /* AppDelegate.swift */; };
 		018E820C1CE6C2F400E835DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E820B1CE6C2F400E835DF /* ViewController.swift */; };
 		018E820F1CE6C2F400E835DF /* Jarvis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 018E820D1CE6C2F400E835DF /* Jarvis.xcdatamodeld */; };
@@ -15,10 +18,18 @@
 		018E821E1CE6CDFE00E835DF /* ISSoundAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 018E821D1CE6CDFE00E835DF /* ISSoundAdditions.m */; };
 		018E82221CE6DFAD00E835DF /* JClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E82211CE6DFAD00E835DF /* JClient.swift */; };
 		018E82241CE6F21900E835DF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018E82231CE6F21900E835DF /* CoreLocation.framework */; };
+		01F847301CE928E30056F8A1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F8472F1CE928E30056F8A1 /* IOKit.framework */; };
+		01F847321CE928F10056F8A1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F847311CE928F10056F8A1 /* CoreFoundation.framework */; };
+		01F847371CE948120056F8A1 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F847361CE948120056F8A1 /* ScriptingBridge.framework */; };
+		01F8473A1CE949620056F8A1 /* JiTunesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F847391CE949620056F8A1 /* JiTunesController.m */; };
 		0D5A0BB99E2B19BEB16F6533 /* libPods-Jarvis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F5AE44956910EDC5A0DD5B /* libPods-Jarvis.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		017A97781CED95AC0088DE48 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
+		017A97791CED95AC0088DE48 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		017A97821CEE23AE0088DE48 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		017A97841CEE23B60088DE48 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		018E82061CE6C2F400E835DF /* Jarvis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jarvis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018E82091CE6C2F400E835DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		018E820B1CE6C2F400E835DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +42,12 @@
 		018E821D1CE6CDFE00E835DF /* ISSoundAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSoundAdditions.m; sourceTree = "<group>"; };
 		018E82211CE6DFAD00E835DF /* JClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JClient.swift; sourceTree = "<group>"; };
 		018E82231CE6F21900E835DF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		01F8472F1CE928E30056F8A1 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		01F847311CE928F10056F8A1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		01F847351CE947090056F8A1 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		01F847361CE948120056F8A1 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		01F847381CE949620056F8A1 /* JiTunesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiTunesController.h; sourceTree = "<group>"; };
+		01F847391CE949620056F8A1 /* JiTunesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiTunesController.m; sourceTree = "<group>"; };
 		1E799205F00FCD990970D949 /* Pods-Jarvis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jarvis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jarvis/Pods-Jarvis.debug.xcconfig"; sourceTree = "<group>"; };
 		43F5AE44956910EDC5A0DD5B /* libPods-Jarvis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jarvis.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB39A70939A1FE317C07ACA /* Pods-Jarvis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jarvis.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jarvis/Pods-Jarvis.release.xcconfig"; sourceTree = "<group>"; };
@@ -41,6 +58,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				017A97851CEE23B60088DE48 /* AVFoundation.framework in Frameworks */,
+				017A97831CEE23AE0088DE48 /* AudioToolbox.framework in Frameworks */,
+				01F847371CE948120056F8A1 /* ScriptingBridge.framework in Frameworks */,
+				01F847321CE928F10056F8A1 /* CoreFoundation.framework in Frameworks */,
+				01F847301CE928E30056F8A1 /* IOKit.framework in Frameworks */,
 				018E82241CE6F21900E835DF /* CoreLocation.framework in Frameworks */,
 				0D5A0BB99E2B19BEB16F6533 /* libPods-Jarvis.a in Frameworks */,
 			);
@@ -79,6 +101,8 @@
 				018E82151CE6C2F400E835DF /* Info.plist */,
 				018E820D1CE6C2F400E835DF /* Jarvis.xcdatamodeld */,
 				018E82211CE6DFAD00E835DF /* JClient.swift */,
+				01F847381CE949620056F8A1 /* JiTunesController.h */,
+				01F847391CE949620056F8A1 /* JiTunesController.m */,
 			);
 			path = Jarvis;
 			sourceTree = "<group>";
@@ -86,6 +110,9 @@
 		018E821F1CE6CE0200E835DF /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				017A97781CED95AC0088DE48 /* NSDate+Helper.h */,
+				017A97791CED95AC0088DE48 /* NSDate+Helper.m */,
+				01F847351CE947090056F8A1 /* iTunes.h */,
 				018E82201CE6CE0A00E835DF /* ISSoundAdditions */,
 			);
 			name = "Third Party";
@@ -103,6 +130,11 @@
 		09B6E1AC283A525AC03B223C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				017A97841CEE23B60088DE48 /* AVFoundation.framework */,
+				017A97821CEE23AE0088DE48 /* AudioToolbox.framework */,
+				01F847361CE948120056F8A1 /* ScriptingBridge.framework */,
+				01F847311CE928F10056F8A1 /* CoreFoundation.framework */,
+				01F8472F1CE928E30056F8A1 /* IOKit.framework */,
 				018E82231CE6F21900E835DF /* CoreLocation.framework */,
 				43F5AE44956910EDC5A0DD5B /* libPods-Jarvis.a */,
 			);
@@ -243,6 +275,8 @@
 				018E820C1CE6C2F400E835DF /* ViewController.swift in Sources */,
 				018E821E1CE6CDFE00E835DF /* ISSoundAdditions.m in Sources */,
 				018E820A1CE6C2F400E835DF /* AppDelegate.swift in Sources */,
+				01F8473A1CE949620056F8A1 /* JiTunesController.m in Sources */,
+				017A977A1CED95AC0088DE48 /* NSDate+Helper.m in Sources */,
 				018E820F1CE6C2F400E835DF /* Jarvis.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +384,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = Jarvis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lindauer.Jarvis;
@@ -366,6 +404,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = Jarvis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lindauer.Jarvis;

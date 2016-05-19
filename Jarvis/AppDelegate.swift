@@ -11,17 +11,42 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    @IBOutlet weak var menuBarMenu: NSMenu!
+    
     var statusItem: NSStatusItem!
-
+    
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        print("Hello?")
+
         // Insert code here to initialize your application
         statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
         statusItem.image = NSImage.init(named: "jarvis-icon")
         
+        statusItem.menu = menuBarMenu
+        
+
+//        let itunes = SBApplication.init(bundleIdentifier: "com.apple.iTunes") as! iTunesApplication
+//        print ("itunes: \(itunes)")
+//        print ("player: \(itunes.playerState)")
+//        print ("player time: \(itunes.playerPosition)")
+
+        
+//        JiTunesController.getPlayback()
+        
+        
         
     }
 
+    @IBAction func showAlarmsWindow(sender: AnyObject) {
+    }
+    
+    @IBAction func quit(sender: AnyObject) {
+        NSApplication.sharedApplication().terminate(self)
+    }
+    
+    func showMenu() {
+        
+    }
+    
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }

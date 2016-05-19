@@ -13,8 +13,6 @@ class ViewController: NSViewController, CLLocationManagerDelegate {
     var locationManager: CLLocationManager!
     var operationQueue: NSOperationQueue!
     var originalSystemVolume: Float!
-    var locationCity: String!
-    var locationState: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,21 +35,29 @@ class ViewController: NSViewController, CLLocationManagerDelegate {
         let d = NSDate.init()
         print ("Now: \(d)")
         
-        let alarmDate = NSDate.init(string: "2016-05-15 20:55:00 +0000")
+//        let alarmDate = NSDate.init(timeIntervalSinceNow: 5)
+        let alarmDate = NSDate.init(string: "2016-05-19 12:20:00 +0000")!
         
-        let timer = NSTimer.init(fireDate: alarmDate!, interval: 0, target: self, selector: #selector(setup), userInfo: nil, repeats: false)
+        let timer = NSTimer.init(fireDate: alarmDate, interval: 0, target: self, selector: #selector(setup), userInfo: nil, repeats: false)
         NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
 
+        let hoursFromNow = Double(Int(alarmDate.timeIntervalSinceNow / 60 / 60 * 10)) / 10.0
+        say("Alarm set for \(hoursFromNow) hours from now.")
         
         
+////        let wakeTime = CFAbsoluteTimeGetCurrent() + 60 as! CFDate
+//        let wakeTime = CFDateCreate(nil, CFAbsoluteTimeGetCurrent() + 90)
+//        
+//        let returnCode = IOPMSchedulePowerEvent (wakeTime, nil, "")
+//        print ("return : \(returnCode)")
         
-        
-        performSelector(#selector(setup), withObject: nil, afterDelay: 5)
         
         
     }
     
+
     func say(text: String) {
+        print("Saying... \(text)")
         let task = NSTask.init()
         task.launchPath = "/usr/bin/say"
         task.arguments = [text]
@@ -60,31 +66,46 @@ class ViewController: NSViewController, CLLocationManagerDelegate {
     }
     
     func setup() {
-//        NSSound.setSystemVolume(1)
-        sayHello()
-        fetchWeather()
+        print ("Setup!")
+        self.originalSystemVolume = NSSound.systemVolume()
+        NSSound.setSystemVolume(0.7)
+        let now = NSDate()
+        print ("Now: \(now)")
         
+        let time = now.stringWithFormat("h:mm a")
+        sayMessage("Good morning Stephen. It's \(time).")
+        fetchWeather()
+
+        performSelector(#selector(sayMessage), withObject: "Also, don't forget. Today is swim P T.", afterDelay: 5)
     }
     
-    func sayHello() {
+    func sayMessage(message: String) {
         operationQueue.addOperation(NSBlockOperation.init(block: {
-            
-            self.originalSystemVolume = NSSound.systemVolume()
-            
-            self.say("Good morning Stephen")
+            self.say(message)
             
         }))
     }
     
+    // good morning. it's 7am. the weather in Tacoma is 72 degrees with scattered clouds.
+
     func fetchWeather() {
-        JClient.fetchWeather(locationCity!, state: locationState!, completion: { (temp, weather, high) in
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let location = userDefaults.objectForKey("location")
+        let city = location!["city"] as! String
+        let state = location!["state"] as! String
+        
+        JClient.fetchWeather(city, state: state, completion: { (temp, weather, high) in
             self.sayWeather(temp, weather: weather, high: high)
         })
     }
     func sayWeather(temp: String, weather: String, high: String) {
         self.operationQueue.addOperation(NSBlockOperation.init(block: { 
+
+            let userDefaults = NSUserDefaults.standardUserDefaults()
+            let location = userDefaults.objectForKey("location")
+            let city = location!["city"] as! String
             
-            self.say("It is currently \(temp). Today will be \(weather) with a high of \(high) degrees")
+            self.say("The weather in \(city) is \(temp) degrees. Today will be \(weather) with a high of \(high).")
 
         }))
     }
@@ -104,15 +125,22 @@ class ViewController: NSViewController, CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
         
         let location = locations[0] as! CLLocation
-        print ("Location: \(location)")
         
         // Prepopulate city, state, zip with user's current location
         let ceo = CLGeocoder.init()
         ceo.reverseGeocodeLocation(location) { (placemarks, error) -> Void in
-            let placemark = placemarks![0]
-            
-            self.locationCity = placemark.locality
-            self.locationState = placemark.administrativeArea
+            if (placemarks?.count > 0) {
+                let placemark = placemarks![0]
+                
+                let locationDict : [String : AnyObject] = [
+                    "city":placemark.locality!,
+                    "state":placemark.administrativeArea!
+                ]
+                
+                let userDefaults = NSUserDefaults.standardUserDefaults()
+                userDefaults.setObject(locationDict, forKey: "location")
+                userDefaults.synchronize()
+            }
         }
     }
     
