@@ -16,3 +16,5 @@
 #import "Cocoa/Cocoa.h"
 #import "JiTunesController.h"
 #import "NSDate+Helper.h"
+#import "NSManagedObject+CoreData.h"
+#import "NSManagedObjectContext+Utils.h"

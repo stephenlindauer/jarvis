@@ -10,6 +10,12 @@
 		017A977A1CED95AC0088DE48 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A97791CED95AC0088DE48 /* NSDate+Helper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		017A97831CEE23AE0088DE48 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017A97821CEE23AE0088DE48 /* AudioToolbox.framework */; };
 		017A97851CEE23B60088DE48 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017A97841CEE23B60088DE48 /* AVFoundation.framework */; };
+		018D90271CF127D300552902 /* JAlarm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D90251CF127D300552902 /* JAlarm+CoreDataProperties.swift */; };
+		018D90281CF127D300552902 /* JAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D90261CF127D300552902 /* JAlarm.swift */; };
+		018D902E1CF1284D00552902 /* NSManagedObject+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 018D902B1CF1284D00552902 /* NSManagedObject+CoreData.m */; };
+		018D902F1CF1284D00552902 /* NSManagedObjectContext+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 018D902D1CF1284D00552902 /* NSManagedObjectContext+Utils.m */; };
+		018D90331CF12AF700552902 /* JCommandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D90321CF12AF700552902 /* JCommandController.swift */; };
+		018D90361CF12B2E00552902 /* JSpotifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D90351CF12B2E00552902 /* JSpotifyController.swift */; };
 		018E820A1CE6C2F400E835DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E82091CE6C2F400E835DF /* AppDelegate.swift */; };
 		018E820C1CE6C2F400E835DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E820B1CE6C2F400E835DF /* ViewController.swift */; };
 		018E820F1CE6C2F400E835DF /* Jarvis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 018E820D1CE6C2F400E835DF /* Jarvis.xcdatamodeld */; };
@@ -30,6 +36,14 @@
 		017A97791CED95AC0088DE48 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		017A97821CEE23AE0088DE48 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		017A97841CEE23B60088DE48 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		018D90251CF127D300552902 /* JAlarm+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JAlarm+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		018D90261CF127D300552902 /* JAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JAlarm.swift; sourceTree = "<group>"; };
+		018D902A1CF1284D00552902 /* NSManagedObject+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+CoreData.h"; sourceTree = "<group>"; };
+		018D902B1CF1284D00552902 /* NSManagedObject+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+CoreData.m"; sourceTree = "<group>"; };
+		018D902C1CF1284D00552902 /* NSManagedObjectContext+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Utils.h"; sourceTree = "<group>"; };
+		018D902D1CF1284D00552902 /* NSManagedObjectContext+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Utils.m"; sourceTree = "<group>"; };
+		018D90321CF12AF700552902 /* JCommandController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCommandController.swift; sourceTree = "<group>"; };
+		018D90351CF12B2E00552902 /* JSpotifyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSpotifyController.swift; sourceTree = "<group>"; };
 		018E82061CE6C2F400E835DF /* Jarvis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jarvis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018E82091CE6C2F400E835DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		018E820B1CE6C2F400E835DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +85,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		018D90291CF127D700552902 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				018D90251CF127D300552902 /* JAlarm+CoreDataProperties.swift */,
+				018D90261CF127D300552902 /* JAlarm.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		018D90301CF1285100552902 /* CoreData Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				018D902A1CF1284D00552902 /* NSManagedObject+CoreData.h */,
+				018D902B1CF1284D00552902 /* NSManagedObject+CoreData.m */,
+				018D902C1CF1284D00552902 /* NSManagedObjectContext+Utils.h */,
+				018D902D1CF1284D00552902 /* NSManagedObjectContext+Utils.m */,
+			);
+			name = "CoreData Helpers";
+			sourceTree = "<group>";
+		};
+		018D90311CF1285900552902 /* NSDate+Helper */ = {
+			isa = PBXGroup;
+			children = (
+				017A97781CED95AC0088DE48 /* NSDate+Helper.h */,
+				017A97791CED95AC0088DE48 /* NSDate+Helper.m */,
+			);
+			name = "NSDate+Helper";
+			sourceTree = "<group>";
+		};
+		018D90341CF12AFB00552902 /* Command Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				018D90321CF12AF700552902 /* JCommandController.swift */,
+				018D90351CF12B2E00552902 /* JSpotifyController.swift */,
+			);
+			name = "Command Controllers";
+			sourceTree = "<group>";
+		};
 		018E81FD1CE6C2F400E835DF = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +144,7 @@
 		018E82081CE6C2F400E835DF /* Jarvis */ = {
 			isa = PBXGroup;
 			children = (
+				018D90291CF127D700552902 /* Models */,
 				018E821B1CE6CDFD00E835DF /* Jarvis-Bridging-Header.h */,
 				018E821F1CE6CE0200E835DF /* Third Party */,
 				018E82091CE6C2F400E835DF /* AppDelegate.swift */,
@@ -103,6 +156,7 @@
 				018E82211CE6DFAD00E835DF /* JClient.swift */,
 				01F847381CE949620056F8A1 /* JiTunesController.h */,
 				01F847391CE949620056F8A1 /* JiTunesController.m */,
+				018D90341CF12AFB00552902 /* Command Controllers */,
 			);
 			path = Jarvis;
 			sourceTree = "<group>";
@@ -110,8 +164,8 @@
 		018E821F1CE6CE0200E835DF /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
-				017A97781CED95AC0088DE48 /* NSDate+Helper.h */,
-				017A97791CED95AC0088DE48 /* NSDate+Helper.m */,
+				018D90301CF1285100552902 /* CoreData Helpers */,
+				018D90311CF1285900552902 /* NSDate+Helper */,
 				01F847351CE947090056F8A1 /* iTunes.h */,
 				018E82201CE6CE0A00E835DF /* ISSoundAdditions */,
 			);
@@ -271,11 +325,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018D902F1CF1284D00552902 /* NSManagedObjectContext+Utils.m in Sources */,
 				018E82221CE6DFAD00E835DF /* JClient.swift in Sources */,
+				018D90281CF127D300552902 /* JAlarm.swift in Sources */,
 				018E820C1CE6C2F400E835DF /* ViewController.swift in Sources */,
 				018E821E1CE6CDFE00E835DF /* ISSoundAdditions.m in Sources */,
 				018E820A1CE6C2F400E835DF /* AppDelegate.swift in Sources */,
+				018D90271CF127D300552902 /* JAlarm+CoreDataProperties.swift in Sources */,
+				018D902E1CF1284D00552902 /* NSManagedObject+CoreData.m in Sources */,
+				018D90331CF12AF700552902 /* JCommandController.swift in Sources */,
 				01F8473A1CE949620056F8A1 /* JiTunesController.m in Sources */,
+				018D90361CF12B2E00552902 /* JSpotifyController.swift in Sources */,
 				017A977A1CED95AC0088DE48 /* NSDate+Helper.m in Sources */,
 				018E820F1CE6C2F400E835DF /* Jarvis.xcdatamodeld in Sources */,
 			);
