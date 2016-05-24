@@ -13,7 +13,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var menuBarMenu: NSMenu!
     
+    var alarmsWindow: NSWindowController!
     var statusItem: NSStatusItem!
+
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
 
@@ -32,20 +34,34 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
 //        JiTunesController.getPlayback()
         
-        
+
+
+        // Delete old alarms
+        for alarm in JAlarm.findAll() as! [JAlarm] {
+            if (alarm.date?.timeIntervalSinceNow < 0) {
+                print ("Delete alarm: \(alarm.date)")
+                alarm.deleteEntity()
+            }
+        }
+        do {
+            try NSManagedObjectContext.contextForCurrentThread().save()
+        } catch { }
         
     }
 
     @IBAction func showAlarmsWindow(sender: AnyObject) {
+        let storyboard = NSStoryboard.init(name: "Main", bundle: nil)
+        alarmsWindow = storyboard.instantiateControllerWithIdentifier("JAlarmsWindow") as! NSWindowController
+        alarmsWindow.showWindow(self)
+        NSApp.activateIgnoringOtherApps(true)
     }
     
     @IBAction func quit(sender: AnyObject) {
         NSApplication.sharedApplication().terminate(self)
     }
     
-    func showMenu() {
-        
-    }
+    
+    
     
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application

@@ -10,6 +10,7 @@
 		017A977A1CED95AC0088DE48 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A97791CED95AC0088DE48 /* NSDate+Helper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		017A97831CEE23AE0088DE48 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017A97821CEE23AE0088DE48 /* AudioToolbox.framework */; };
 		017A97851CEE23B60088DE48 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017A97841CEE23B60088DE48 /* AVFoundation.framework */; };
+		018749841CF2B001005997A5 /* JAlarmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018749831CF2B001005997A5 /* JAlarmsViewController.swift */; };
 		018D90271CF127D300552902 /* JAlarm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D90251CF127D300552902 /* JAlarm+CoreDataProperties.swift */; };
 		018D90281CF127D300552902 /* JAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D90261CF127D300552902 /* JAlarm.swift */; };
 		018D902E1CF1284D00552902 /* NSManagedObject+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 018D902B1CF1284D00552902 /* NSManagedObject+CoreData.m */; };
@@ -36,6 +37,7 @@
 		017A97791CED95AC0088DE48 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		017A97821CEE23AE0088DE48 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		017A97841CEE23B60088DE48 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		018749831CF2B001005997A5 /* JAlarmsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JAlarmsViewController.swift; sourceTree = "<group>"; };
 		018D90251CF127D300552902 /* JAlarm+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JAlarm+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		018D90261CF127D300552902 /* JAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JAlarm.swift; sourceTree = "<group>"; };
 		018D902A1CF1284D00552902 /* NSManagedObject+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+CoreData.h"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				01F847381CE949620056F8A1 /* JiTunesController.h */,
 				01F847391CE949620056F8A1 /* JiTunesController.m */,
 				018D90341CF12AFB00552902 /* Command Controllers */,
+				018749831CF2B001005997A5 /* JAlarmsViewController.swift */,
 			);
 			path = Jarvis;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				018E821E1CE6CDFE00E835DF /* ISSoundAdditions.m in Sources */,
 				018E820A1CE6C2F400E835DF /* AppDelegate.swift in Sources */,
 				018D90271CF127D300552902 /* JAlarm+CoreDataProperties.swift in Sources */,
+				018749841CF2B001005997A5 /* JAlarmsViewController.swift in Sources */,
 				018D902E1CF1284D00552902 /* NSManagedObject+CoreData.m in Sources */,
 				018D90331CF12AF700552902 /* JCommandController.swift in Sources */,
 				01F8473A1CE949620056F8A1 /* JiTunesController.m in Sources */,
