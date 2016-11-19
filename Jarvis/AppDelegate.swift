@@ -15,6 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var alarmsWindow: NSWindowController!
     var statusItem: NSStatusItem!
+    var jarvis: JJarvis!
 
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
@@ -47,6 +48,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             try NSManagedObjectContext.contextForCurrentThread().save()
         } catch { }
         
+        
+        jarvis = JJarvis.shared
     }
 
     @IBAction func showAlarmsWindow(sender: AnyObject) {
