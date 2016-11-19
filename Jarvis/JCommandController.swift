@@ -9,16 +9,15 @@
 
 class JCommandController: NSObject {
     
-    func getCommands() -> [String] {
-        return []
-    }
+    // Override these functions
+    func setup() {}
+    func getCommands() -> [String] { return [] }
+    func performCommand(command: String) {}
     
     func respondsToCommand(command: String) -> Bool {
         return getCommands().contains(command)
     }
     
-    func performCommand(command: String) {
-        
-    }
+    
     
 }
