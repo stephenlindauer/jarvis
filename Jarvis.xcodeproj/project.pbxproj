@@ -25,6 +25,13 @@
 		018E821E1CE6CDFE00E835DF /* ISSoundAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 018E821D1CE6CDFE00E835DF /* ISSoundAdditions.m */; };
 		018E82221CE6DFAD00E835DF /* JClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E82211CE6DFAD00E835DF /* JClient.swift */; };
 		018E82241CE6F21900E835DF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018E82231CE6F21900E835DF /* CoreLocation.framework */; };
+		0190D5911CF649680012FAEE /* JAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190D5901CF649680012FAEE /* JAudioController.swift */; };
+		0190D5931CF649F40012FAEE /* JOpenerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190D5921CF649F40012FAEE /* JOpenerController.swift */; };
+		0190D5951CF6A72F0012FAEE /* JLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190D5941CF6A72F0012FAEE /* JLocationController.swift */; };
+		01AB2F5C1CF4AE3C00A00B64 /* JJarvis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AB2F5B1CF4AE3C00A00B64 /* JJarvis.swift */; };
+		01F2F0521CF7A2C3008562C0 /* JEditAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2F0511CF7A2C3008562C0 /* JEditAlarmViewController.swift */; };
+		01F2F0541CF8CD22008562C0 /* JAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2F0531CF8CD22008562C0 /* JAlarmController.swift */; };
+		01F2F0561CF8D213008562C0 /* JWeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2F0551CF8D212008562C0 /* JWeatherController.swift */; };
 		01F847301CE928E30056F8A1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F8472F1CE928E30056F8A1 /* IOKit.framework */; };
 		01F847321CE928F10056F8A1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F847311CE928F10056F8A1 /* CoreFoundation.framework */; };
 		01F847371CE948120056F8A1 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F847361CE948120056F8A1 /* ScriptingBridge.framework */; };
@@ -58,6 +65,13 @@
 		018E821D1CE6CDFE00E835DF /* ISSoundAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSoundAdditions.m; sourceTree = "<group>"; };
 		018E82211CE6DFAD00E835DF /* JClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JClient.swift; sourceTree = "<group>"; };
 		018E82231CE6F21900E835DF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0190D5901CF649680012FAEE /* JAudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JAudioController.swift; sourceTree = "<group>"; };
+		0190D5921CF649F40012FAEE /* JOpenerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOpenerController.swift; sourceTree = "<group>"; };
+		0190D5941CF6A72F0012FAEE /* JLocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLocationController.swift; sourceTree = "<group>"; };
+		01AB2F5B1CF4AE3C00A00B64 /* JJarvis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJarvis.swift; sourceTree = "<group>"; };
+		01F2F0511CF7A2C3008562C0 /* JEditAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEditAlarmViewController.swift; sourceTree = "<group>"; };
+		01F2F0531CF8CD22008562C0 /* JAlarmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JAlarmController.swift; sourceTree = "<group>"; };
+		01F2F0551CF8D212008562C0 /* JWeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWeatherController.swift; sourceTree = "<group>"; };
 		01F8472F1CE928E30056F8A1 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		01F847311CE928F10056F8A1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		01F847351CE947090056F8A1 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
@@ -121,6 +135,11 @@
 			children = (
 				018D90321CF12AF700552902 /* JCommandController.swift */,
 				018D90351CF12B2E00552902 /* JSpotifyController.swift */,
+				0190D5901CF649680012FAEE /* JAudioController.swift */,
+				0190D5921CF649F40012FAEE /* JOpenerController.swift */,
+				0190D5941CF6A72F0012FAEE /* JLocationController.swift */,
+				01F2F0531CF8CD22008562C0 /* JAlarmController.swift */,
+				01F2F0551CF8D212008562C0 /* JWeatherController.swift */,
 			);
 			name = "Command Controllers";
 			sourceTree = "<group>";
@@ -158,8 +177,9 @@
 				018E82211CE6DFAD00E835DF /* JClient.swift */,
 				01F847381CE949620056F8A1 /* JiTunesController.h */,
 				01F847391CE949620056F8A1 /* JiTunesController.m */,
+				01AB2F5B1CF4AE3C00A00B64 /* JJarvis.swift */,
+				01F2F0501CF7A29D008562C0 /* Alarm View Controllers */,
 				018D90341CF12AFB00552902 /* Command Controllers */,
-				018749831CF2B001005997A5 /* JAlarmsViewController.swift */,
 			);
 			path = Jarvis;
 			sourceTree = "<group>";
@@ -182,6 +202,15 @@
 				018E821D1CE6CDFE00E835DF /* ISSoundAdditions.m */,
 			);
 			name = ISSoundAdditions;
+			sourceTree = "<group>";
+		};
+		01F2F0501CF7A29D008562C0 /* Alarm View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				018749831CF2B001005997A5 /* JAlarmsViewController.swift */,
+				01F2F0511CF7A2C3008562C0 /* JEditAlarmViewController.swift */,
+			);
+			name = "Alarm View Controllers";
 			sourceTree = "<group>";
 		};
 		09B6E1AC283A525AC03B223C /* Frameworks */ = {
@@ -328,7 +357,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F2F0541CF8CD22008562C0 /* JAlarmController.swift in Sources */,
 				018D902F1CF1284D00552902 /* NSManagedObjectContext+Utils.m in Sources */,
+				0190D5911CF649680012FAEE /* JAudioController.swift in Sources */,
 				018E82221CE6DFAD00E835DF /* JClient.swift in Sources */,
 				018D90281CF127D300552902 /* JAlarm.swift in Sources */,
 				018E820C1CE6C2F400E835DF /* ViewController.swift in Sources */,
@@ -337,9 +368,14 @@
 				018D90271CF127D300552902 /* JAlarm+CoreDataProperties.swift in Sources */,
 				018749841CF2B001005997A5 /* JAlarmsViewController.swift in Sources */,
 				018D902E1CF1284D00552902 /* NSManagedObject+CoreData.m in Sources */,
+				0190D5931CF649F40012FAEE /* JOpenerController.swift in Sources */,
 				018D90331CF12AF700552902 /* JCommandController.swift in Sources */,
+				01AB2F5C1CF4AE3C00A00B64 /* JJarvis.swift in Sources */,
 				01F8473A1CE949620056F8A1 /* JiTunesController.m in Sources */,
 				018D90361CF12B2E00552902 /* JSpotifyController.swift in Sources */,
+				01F2F0521CF7A2C3008562C0 /* JEditAlarmViewController.swift in Sources */,
+				0190D5951CF6A72F0012FAEE /* JLocationController.swift in Sources */,
+				01F2F0561CF8D213008562C0 /* JWeatherController.swift in Sources */,
 				017A977A1CED95AC0088DE48 /* NSDate+Helper.m in Sources */,
 				018E820F1CE6C2F400E835DF /* Jarvis.xcdatamodeld in Sources */,
 			);
