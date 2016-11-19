@@ -16,8 +16,14 @@ class JAlarmsViewController: NSViewController, NSTableViewDelegate, NSTableViewD
     override func viewDidLoad() {
         
         alarms = JAlarm.findAllSortedBy("date", ascending: true)
+        
+        NSNotificationCenter().addObserver(self, selector: #selector(refreshAlarms), name: "JAlarmsUpdated", object: nil)
     }
     
+    func refreshAlarms() {
+        alarms = JAlarm.findAllSortedBy("date", ascending: true)
+        self.tableView.reloadData()
+    }
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
         return alarms.count
@@ -69,8 +75,6 @@ class JAlarmsViewController: NSViewController, NSTableViewDelegate, NSTableViewD
         try NSManagedObjectContext.contextForCurrentThread().save()
         } catch {}
         
-        
-        alarms = JAlarm.findAllSortedBy("date", ascending: true)
-        tableView.reloadData()
+        refreshAlarms()
     }
 }
